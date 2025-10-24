@@ -1,4 +1,5 @@
 import hid
+# XReal Air ICU & MCU Protocols: https://voidcomputing.hu/blog/good-bad-ugly/#the-quest-for-imu-data
 class HID_Handler:
     @staticmethod
     def list_devices() -> list[dict]:
