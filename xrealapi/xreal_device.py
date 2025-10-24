@@ -1,0 +1,3 @@
+class XRealDevice:
+    def __init__(self,):
+        ...
