@@ -11,6 +11,12 @@ class HID_Handler:
         Lists all detected HID devices
         """
         return hid.enumerate()
+    @staticmethod
+    def get_devices(name,timeout=1000) -> list[dict]:
+        return list(
+            filter(
+                lambda x: x["product_string"]==name,
+                HID_Handler.list_devices()))
 
     def __init__(self, vid, pid) -> None:
         self.vid, self.pid = vid, pid
