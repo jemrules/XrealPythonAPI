@@ -1,3 +1,7 @@
+import sys, ctypes
+print(sys.platform)
+if sys.platform=="win32":
+    ctypes.CDLL('hidapi-dll/hidapi.dll')
 import hid
 # XReal Air ICU & MCU Protocols: https://voidcomputing.hu/blog/good-bad-ugly/#the-quest-for-imu-data
 class HID_Handler:
